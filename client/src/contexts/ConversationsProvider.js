@@ -93,9 +93,11 @@ export function ConversationsProvider({ id, children }) {
   }
 
   return (
-    <ConversationsContext.Provider value={value}>
-      {children}
-    </ConversationsContext.Provider>
+    <div className="chat-box">
+      <ConversationsContext.Provider value={value}>
+        <div clasName="chat-box">{children}</div>
+      </ConversationsContext.Provider>
+    </div>
   )
 }
 
